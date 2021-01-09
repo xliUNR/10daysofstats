@@ -3,7 +3,19 @@
 # This contains the stats library that I wrote for the exercises
 # imports
 import sys
-
+import math
+# calculates the mean of data
+def mean(data, size):
+    return float(sum(data)/size)
+# calculate std_dev
+def std_dev(data, size):
+    dist_sum = 0
+    u = mean(data, size)
+    for i in range(size):
+        dist_sum += (data[i] - u)**2
+        
+    return math.sqrt(dist_sum / size)
+     
 # median function 
 # Data must be sorted
 def median(sorted_data, start, end):
