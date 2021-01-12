@@ -51,4 +51,28 @@ def interquartile_range(data, size):
       Q1, Q2, Q3 = quartiles(data, size)
       return float(Q3 - Q1)
         
+# simple recursive factorial function
+def factorial(n):
+    if( n < 0):
+        raise Exception("Cannot take factorial of negative number.")
+    elif( n > 1):
+        return n * factorial(n-1)
+    else:
+        return 1
+    
+# Calculates probability of a combination given 
+# n: number of trials
+# x: number of successes
 
+def combination(n, x):
+    numerator = factorial(n)
+    denom = factorial(x) * factorial((n-x))
+    return float(numerator / denom)
+
+# calculate binomial probabilities
+# n: number of trials
+# x: number of successes
+# p: probability of success   
+def binomial(n, x, p):
+    return combination(n, x) * (p**x) * ((1 - p)**(n-x)) 
+    
