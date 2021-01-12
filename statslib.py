@@ -75,4 +75,7 @@ def combination(n, x):
 # p: probability of success   
 def binomial(n, x, p):
     return combination(n, x) * (p**x) * ((1 - p)**(n-x)) 
-    
+ 
+def geometric_dist(n, p, q):
+    return (q**(n-1))*p
+
