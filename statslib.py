@@ -79,3 +79,10 @@ def binomial(n, x, p):
 def geometric_dist(n, p, q):
     return (q**(n-1))*p
 
+# poisson probability
+# Where X is expected value 
+# Where S is random value
+def poisson(X, s):
+    return ( (X**s) * math.exp(-X) ) / math.factorial(s)
+
+
